@@ -1,0 +1,16 @@
+^.*\.Rproj$
+^\.Rproj\.user$
+^README\.Rmd$
+^README\.md$
+^NEWS\.md$
+^\.github$
+^\.git$
+^\.gitignore$
+^cran-comments\.md$
+^CRAN-SUBMISSION$
+^\.travis\.yml$
+^appveyor\.yml$
+^codecov\.yml$
+^_pkgdown\.yml$
+^docs$
+^pkgdown$
