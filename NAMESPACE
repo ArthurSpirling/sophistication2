@@ -13,6 +13,7 @@ export(snippets_make)
 
 import(quanteda)
 import(data.table)
+import(udpipe)
 importFrom(quanteda.textstats, textstat_readability)
 importFrom(stats, sd)
 importFrom(stats, median)

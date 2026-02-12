@@ -1,14 +1,14 @@
 Package: sophistication2
 Type: Package
 Title: Measuring Text Sophistication
-Version: 0.80.0
+Version: 0.81.0
 Date: 2026-02-12
 Authors@R: c(
     person("Kenneth", "Benoit", email = "kbenoit@lse.ac.uk", role = c("cre", "aut", "cph"), comment = c(ORCID = "0000-0002-0797-564X")),
     person("Kevin", "Munger", email = "kevin.munger@gmail.com", role = "aut"),
     person("Arthur", "Spirling", email = "as9934@nyu.edu", role = "aut"),
     person("Arthur Spirling", "Updater", email = "maintainer@example.com", role = "ctb", comment = "Updated for modern quanteda"))
-Description: Provides functions for measuring the sophistication of political texts based on readability and linguistic features. Includes tools for creating text snippets, generating comparison pairs, computing readability scores with bootstrap estimates, and predicting text sophistication. Built on modern quanteda (v4+) and quanteda.textstats. Based on the paper "Measuring and Explaining Political Sophistication Through Textual Complexity" by Benoit, Munger, and Spirling (2019) <doi:10.1111/ajps.12423>.
+Description: Provides functions for measuring the sophistication of political texts based on readability and linguistic features. Includes tools for creating text snippets, generating comparison pairs, computing readability scores with bootstrap estimates, and predicting text sophistication. Built on modern quanteda (v4+) and quanteda.textstats. Uses udpipe for POS tagging (pure R, no Python required). Based on the paper "Measuring and Explaining Political Sophistication Through Textual Complexity" by Benoit, Munger, and Spirling (2019) <doi:10.1111/ajps.12423>.
 License: GPL-3
 Depends:
     R (>= 4.0.0)
@@ -17,9 +17,9 @@ Imports:
     quanteda.textstats (>= 0.96),
     data.table,
     stringi,
-    MASS
+    MASS,
+    udpipe (>= 0.8)
 Suggests:
-    spacyr (>= 1.2),
     testthat,
     knitr,
     rmarkdown,

@@ -13,13 +13,14 @@
 #'   \item \code{\link{pairs_gold_make}} - Create gold standard pairs
 #'   \item \code{\link{bootstrap_readability}} - Bootstrap readability statistics
 #'   \item \code{\link{covars_make}} - Compute text covariates
+#'   \item \code{\link{covars_make_pos}} - Compute POS features (using udpipe)
 #'   \item \code{\link{predict_readability}} - Predict readability scores
 #' }
 #'
-#' @section Optional Dependencies:
-#' The \code{spacyr} package is only required for the \code{\link{covars_make_pos}}
-#' function which computes part-of-speech features. All other functions work without
-#' spacyr.
+#' @section Language Models:
+#' The \code{\link{covars_make_pos}} function uses udpipe for part-of-speech tagging.
+#' On first use, it automatically downloads the English language model (~17MB).
+#' This is a pure R solution - no Python or external dependencies required.
 #'
 #' @docType package
 #' @name sophistication2-package
