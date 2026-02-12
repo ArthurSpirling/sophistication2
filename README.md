@@ -8,7 +8,7 @@
 
 > Benoit, Kenneth, Kevin Munger, and Arthur Spirling. 2019. "Measuring and Explaining Political Sophistication Through Textual Complexity." *American Journal of Political Science* 63(2): 491-508. <https://doi.org/10.1111/ajps.12423>
 
-I (**Arthur Spirling**) vibecoded it from scratch in ~20 minutes using Claude Sonnet 4.5, mostly as (another) proof of concept of coding ability.   
+I (**Arthur Spirling**) vibecoded it from in ~20 minutes using Claude Sonnet 4.5, mostly as (another) proof of concept of coding ability.   
 
 ### What's New in sophistication2 v0.81
 
