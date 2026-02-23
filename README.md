@@ -4,11 +4,12 @@
 
 ## Overview
 
-**sophistication2** is an updated version of the `sophistication` package, providing functions for measuring the sophistication of political texts based on readability and linguistic features. This package implements the methodology from:
+**sophistication2** is an updated version of the `sophistication` package, providing functions for measuring the sophistication of political texts based on readability and linguistic features. This is very much a trial/beta release (it uses vibe coding, see below). I (**Arthur Spirling**) vibecoded it from in ~20 minutes using Claude Sonnet 4.5, mostly as (another) proof of concept of coding ability. I haven't checked it in any great detail, though the main functions appear to work ok.    
+
+This package should implement the methodology from:
 
 > Benoit, Kenneth, Kevin Munger, and Arthur Spirling. 2019. "Measuring and Explaining Political Sophistication Through Textual Complexity." *American Journal of Political Science* 63(2): 491-508. <https://doi.org/10.1111/ajps.12423>
 
-I (**Arthur Spirling**) vibecoded it from in ~20 minutes using Claude Sonnet 4.5, mostly as (another) proof of concept of coding ability. I haven't checked it in any great detail, though the main functions appear to work ok.    
 
 ### What's New in sophistication2 v0.81
 
