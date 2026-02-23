@@ -8,7 +8,7 @@
 
 > Benoit, Kenneth, Kevin Munger, and Arthur Spirling. 2019. "Measuring and Explaining Political Sophistication Through Textual Complexity." *American Journal of Political Science* 63(2): 491-508. <https://doi.org/10.1111/ajps.12423>
 
-I (**Arthur Spirling**) vibecoded it from in ~20 minutes using Claude Sonnet 4.5, mostly as (another) proof of concept of coding ability.   
+I (**Arthur Spirling**) vibecoded it from in ~20 minutes using Claude Sonnet 4.5, mostly as (another) proof of concept of coding ability. I haven't checked it in any great detail, though the main functions appear to work ok.    
 
 ### What's New in sophistication2 v0.81
 
@@ -145,7 +145,7 @@ Performance is comparable for most NLP tasks, and the ease of use far outweighs 
 | POS tagging | spacyr (Python required) | udpipe (pure R) |
 | R version | >= 3.2 | >= 4.0 |
 | Installation | Complex (Python+R) | Simple (R only) |
-| Classroom ready | No | Yes! |
+| Classroom ready | No | Maybe (not stress tested) |
 
 ## Dependencies
 
