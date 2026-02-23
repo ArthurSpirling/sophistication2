@@ -1,10 +1,10 @@
-# sophistication2: Measuring Text Sophistication (Pure R - No Python!)
+# sophistication2: Measuring Text Sophistication (vibe coding to remove Python dependency)
 
 [![R-CMD-check](https://img.shields.io/badge/R--CMD--check-passing-brightgreen)]()
 
 ## Overview
 
-**sophistication2** is an updated version of the `sophistication` package, providing functions for measuring the sophistication of political texts based on readability and linguistic features. This is very much a trial/beta release (it uses vibe coding, see below). I (**Arthur Spirling**) vibecoded it from in ~20 minutes using Claude Sonnet 4.5, mostly as (another) proof of concept of coding ability. I haven't checked it in any great detail, though the main functions appear to work ok.    
+**sophistication2** is an updated version of the `sophistication` package, providing functions for measuring the sophistication of political texts based on readability and linguistic features. This is very much a trial/beta release. I (**Arthur Spirling**) vibecoded it from in ~20 minutes using Claude Sonnet 4.5, mostly as  proof of concept of coding ability. I haven't checked it in any great detail, though the main functions appear to work ok.    If you find errors, let me know! 
 
 This package should implement the methodology from:
 
