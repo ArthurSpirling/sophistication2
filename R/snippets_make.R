@@ -59,9 +59,9 @@ snippets_make <- function(x, nsentence = 1, minchar = 0, maxchar = Inf) {
                 result_list[[snippet_counter]] <- data.frame(
                     docID = doc,
                     snippetID = paste0(doc, "_", sprintf("%07d", snippet_counter)),
-                    text = snippet_text,
-                    stringsAsFactors = FALSE
+                    text = snippet_text
                 )
+
                 snippet_counter <- snippet_counter + 1
             }
         }
@@ -73,9 +73,8 @@ snippets_make <- function(x, nsentence = 1, minchar = 0, maxchar = Inf) {
         rownames(result_df) <- NULL
         return(result_df)
     } else {
-        return(data.frame(docID = character(), 
-                         snippetID = character(), 
-                         text = character(), 
-                         stringsAsFactors = FALSE))
+        return(data.frame(docID = character(),
+                         snippetID = character(),
+                         text = character()))
     }
 }

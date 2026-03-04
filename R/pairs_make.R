@@ -5,6 +5,7 @@
 #' @param n.pairs number of pairs to generate (if NULL, uses all possible pairs up to a maximum)
 #' @return a data.frame with snippet pairs for comparison
 #' @export
+#' @importFrom utils combn
 #' @examples
 #' \dontrun{
 #' snippets <- data.frame(
@@ -51,8 +52,7 @@ pairs_regular_make <- function(x, n.pairs = NULL) {
         text1 = x$text[pair_indices[1, ]],
         docID2 = x$docID[pair_indices[2, ]],
         snippetID2 = x$snippetID[pair_indices[2, ]],
-        text2 = x$text[pair_indices[2, ]],
-        stringsAsFactors = FALSE
+        text2 = x$text[pair_indices[2, ]]
     )
     
     return(result)

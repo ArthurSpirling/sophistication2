@@ -196,34 +196,19 @@ print(data.frame(
 ))
 
 # =============================================================================
-# ADVANCED: POS FEATURES (REQUIRES SPACYR)
+# ADVANCED: POS FEATURES (uses udpipe, pure R - no Python required)
 # =============================================================================
 
-# Only run if spacyr is installed and initialized
-if (requireNamespace("spacyr", quietly = TRUE) && 
-    spacyr::spacy_is_installed()) {
-    
-    print("Computing POS features...")
-    
-    # Make sure spaCy is initialized
-    if (!spacyr::spacy_initialized()) {
-        spacyr::spacy_initialize()
-    }
-    
-    pos_covars <- covars_make_pos(
-        sample(snippets_clean$text, 10),
-        pos_tags = c("NOUN", "VERB", "ADJ", "ADV")
-    )
-    
-    print("POS covariate summary:")
-    print(summary(pos_covars[, -1]))  # Exclude doc_id column
-    
-    # Clean up
-    # spacyr::spacy_finalize()
-} else {
-    print("Skipping POS features (spacyr not available)")
-    print("Install with: install.packages('spacyr'); library(spacyr); spacy_install()")
-}
+# covars_make_pos uses udpipe; the English model (~17MB) is downloaded on first use
+print("Computing POS features...")
+
+pos_covars <- covars_make_pos(
+    sample(snippets_clean$text, 10),
+    pos_tags = c("NOUN", "VERB", "ADJ", "ADV")
+)
+
+print("POS covariate summary:")
+print(summary(pos_covars[, -1]))  # Exclude doc_id column
 
 # =============================================================================
 # SUMMARY

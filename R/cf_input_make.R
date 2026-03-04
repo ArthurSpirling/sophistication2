@@ -18,25 +18,33 @@
 #' }
 cf_input_make <- function(pairs, gold_pairs = NULL) {
     
+    # Warn if reserved columns already exist and will be overwritten
+    reserved <- c("_golden", "pair_id")
+    existing <- reserved[reserved %in% names(pairs)]
+    if (length(existing) > 0) {
+        warning("Overwriting existing column(s) in pairs: ",
+                paste(existing, collapse = ", "))
+    }
+
     # Combine regular and gold pairs if provided
     if (!is.null(gold_pairs)) {
         # Ensure gold pairs have the _golden column
         if (!"_golden" %in% names(gold_pairs)) {
             gold_pairs$`_golden` <- TRUE
         }
-        
+
         # Ensure regular pairs don't have it
         pairs$`_golden` <- FALSE
-        
+
         # Combine
         all_pairs <- rbind(pairs, gold_pairs)
     } else {
         all_pairs <- pairs
         all_pairs$`_golden` <- FALSE
     }
-    
+
     # Add unique ID
-    all_pairs$pair_id <- 1:nrow(all_pairs)
+    all_pairs$pair_id <- seq_len(nrow(all_pairs))
     
     # Reorder columns for CF format
     col_order <- c("pair_id", "_golden", names(all_pairs)[!names(all_pairs) %in% c("pair_id", "_golden")])

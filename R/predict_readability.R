@@ -31,8 +31,7 @@ predict_readability <- function(model, newdata, measure = "predicted") {
     
     # Return as data.frame
     result <- data.frame(
-        prediction = preds,
-        stringsAsFactors = FALSE
+        prediction = preds
     )
     names(result) <- measure
     

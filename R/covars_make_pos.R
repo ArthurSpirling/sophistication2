@@ -35,7 +35,13 @@ covars_make_pos <- function(x,
     
     if (!file.exists(model_file) || model_file == "") {
         message("Downloading ", model_language, " language model (one-time, ~17MB)...")
-        model_download <- udpipe::udpipe_download_model(language = model_language)
+        model_download <- tryCatch(
+            udpipe::udpipe_download_model(language = model_language),
+            error = function(e) {
+                stop("Failed to download udpipe model '", model_language, "': ", conditionMessage(e),
+                     "\nCheck your internet connection or supply a local model path.")
+            }
+        )
         model_file <- model_download$file_model
         message("Model downloaded to: ", model_file)
     }
@@ -50,7 +56,7 @@ covars_make_pos <- function(x,
     
     # Count POS tags for each document
     doc_ids <- unique(annotated_df$doc_id)
-    result <- data.frame(doc_id = doc_ids, stringsAsFactors = FALSE)
+    result <- data.frame(doc_id = doc_ids)
     
     for (tag in pos_tags) {
         counts <- tapply(annotated_df$upos == tag, 

@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep:*)",
+      "Bash(R CMD:*)",
+      "Bash(\"/c/Program Files/R/R-4.5.1/bin/R.exe\" CMD:*)",
+      "Bash(\"/c/Program Files/R/R-4.5.1/bin/Rscript.exe\":*)",
+      "Bash(cmd:*)",
+      "Bash(powershell.exe:*)",
+      "Bash(\"C:/Users/as1780/OneDrive - Princeton University/Documents/GitHub/sophistication2/.Rbuildignore\":*)"
+    ]
+  }
+}

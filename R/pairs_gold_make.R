@@ -9,6 +9,8 @@
 #' @return a data.frame of gold pairs with readability scores and indicators
 #' @export
 #' @importFrom quanteda.textstats textstat_readability
+#' @importFrom stats quantile
+#' @importFrom utils head
 #' @examples
 #' \dontrun{
 #' snippets <- data.frame(

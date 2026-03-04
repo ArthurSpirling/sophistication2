@@ -6,6 +6,7 @@
 #' @param normalize if \code{TRUE}, normalize features
 #' @return a data.frame of covariates
 #' @export
+#' @importFrom stats sd median
 #' @import quanteda
 #' @examples
 #' \dontrun{
@@ -29,7 +30,7 @@ covars_make <- function(x, baseline = NULL, normalize = FALSE) {
     ttr <- n_types / n_tokens
     
     # Average word length
-    tok_texts <- unlist(quanteda::as.list(toks))
+    tok_texts <- unlist(as.list(toks))
     avg_word_length <- mean(nchar(tok_texts), na.rm = TRUE)
     
     # Sentence length statistics
@@ -43,8 +44,7 @@ covars_make <- function(x, baseline = NULL, normalize = FALSE) {
         n_types = n_types,
         ttr = ttr,
         avg_word_length = avg_word_length,
-        avg_sent_length = avg_sent_length,
-        stringsAsFactors = FALSE
+        avg_sent_length = avg_sent_length
     )
     
     # Normalize if requested
